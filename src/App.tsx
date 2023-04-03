@@ -1,33 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, useRoutes } from 'react-router-dom'
 
+import Index from './pages/index'
+import Layout from './pages/layout'
+import Translate from './pages/translate'
+const routesList = [
+  {
+    path: '/',
+    element: <Layout/>,
+    children:[
+      {
+        element: <Index />,
+        index: true, // index设置为true 变成默认的二级路由
+      },
+      {
+        element:<Translate />,
+        path:"translate"
+      }
+    ]
+  }
+]
+function WrapperRoutes() {
+  let element = useRoutes(routesList)
+  return element
+}
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <WrapperRoutes />
+      </BrowserRouter>
     </div>
   )
 }
