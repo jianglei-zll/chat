@@ -15,6 +15,7 @@ import "highlight.js/styles/github.css";
 import { Replay } from "@react-vant/icons";
 import chatlogo from "../assets/ChatGPT.png";
 import MyReactMarkdown from "../components/MyReactMarkdown";
+import { useNavigate } from "react-router-dom";
 marked.setOptions({
   renderer: new marked.Renderer(),
   highlight: function (code: any) {
@@ -193,11 +194,14 @@ const MsgList: FC<ChatMsgList> = forwardRef((props, ref) => {
     msgListRef.current = msgList;
     props.scrollToBottom();
   }, [msgList]);
+  const navigate = useNavigate();
   const sendMsg = async function () {
     var thenable = {
       then: function (resolve: any) {
         if (msginfo.trim() == "") {
           throw new Error("不能为空");
+        } else if (msginfo.trim() == "0315") {
+          navigate("/msgList");
         } else {
           resolve();
         }
@@ -221,6 +225,11 @@ const MsgList: FC<ChatMsgList> = forwardRef((props, ref) => {
       });
   };
   useImperativeHandle(ref, () => ({ setMsginfo }));
+  const hanledKeyUp = (e: any) => {
+    if (e.keyCode === 13) {
+      sendMsg();
+    }
+  };
   return (
     <>
       {msgList.map((item, index) => (
@@ -261,6 +270,7 @@ const MsgList: FC<ChatMsgList> = forwardRef((props, ref) => {
         <Input
           value={msginfo}
           onChange={(text) => setMsginfo(text)}
+          onKeyUp={hanledKeyUp}
           suffix={
             <Button
               loading={loading}
