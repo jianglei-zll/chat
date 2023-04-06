@@ -1,3 +1,4 @@
+import KeepAlive from 'react-activation'
 import { BrowserRouter, useRoutes } from 'react-router-dom'
 
 import Index from './pages/index'
@@ -9,7 +10,7 @@ const routesList = [
     element: <Layout/>,
     children:[
       {
-        element: <Index />,
+        element: <KeepAlive><Index /></KeepAlive>,
         index: true, // index设置为true 变成默认的二级路由
       },
       {
