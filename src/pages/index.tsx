@@ -170,6 +170,11 @@ const MsgList: FC<ChatMsgList> = forwardRef((props, ref) => {
     //   role: "user",
     //   content: "好的，我知道了",
     // }
+    // {
+    //   role: "assistant",
+    //   content:
+    //     "以下是一个用Java编写的示例代码，用于在字符串中找到不包含重复字符的最长子串。这段代码使用了窗口移动的机制来逐步扩展和收缩当前的子串。\n\n```java\npublic static int findLengthOfLongestSubstring(String s) {\n    int n = s.length();\n    int maxLength = 0;\n    int i = 0, j = 0;\n    Set<Character> set = new HashSet<>();\n\n    while (j < n) {\n        // 如果集合中已包含当前字符，则从窗口左侧开始缩小窗口\n        if (set.contains(s.charAt(j))) {\n            set.remove(s.charAt(i++));\n        } \n        // 如果集合中未包含当前字符，则向右扩展窗口，并更新最长子串长度\n        else {\n            set.add(s.charAt(j++));\n            maxLength = Math.max(maxLength, j - i);\n        }\n    }\n\n    return maxLength;\n}\n```\n\n在这段代码中，i和j分别指向当前子串的左右两端，set集合用于存储当前子串包含的字符。while循环在每个迭代中检查当前子串是否包含重复字符。如果包含重复字符，那么set集合中将删除当前子串的左端字符，以便继续向右移动窗口。反之，如果集合中不包含当前字符，则将其添加到集合中，并更新当前最长子串的长度。这样，窗口将不断向右移动，以便找到更长的子串，同时保持子串的唯一性。当窗口到达字符串的末尾时，该算法将返回最大子串长度。",
+    // },
   ]);
   const [msginfo, setMsginfo] = useState("");
   const [loading, setLoading] = useState(false);

@@ -191,7 +191,8 @@ body,
     flex: 1;
   }
   & > div:last-child {
-    width: 100px;
+    width: 60px;
+    padding: 5px;
     font-size: 14px;
     color: var(--rv-typography-color);
   }
