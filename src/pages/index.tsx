@@ -9,26 +9,10 @@ import {
   useState,
 } from "react";
 import { Button, Dialog, Input, Loading, Typography } from "react-vant";
-import { marked } from "marked";
-import hljs from "highlight.js";
-import "highlight.js/styles/github.css";
 import { Replay } from "@react-vant/icons";
 import chatlogo from "../assets/ChatGPT.png";
 import MyReactMarkdown from "../components/MyReactMarkdown";
 import { useNavigate } from "react-router-dom";
-marked.setOptions({
-  renderer: new marked.Renderer(),
-  highlight: function (code: any) {
-    return hljs.highlightAuto(code).value;
-  },
-  pedantic: false,
-  gfm: true,
-  breaks: false,
-  sanitize: false,
-  smartLists: true,
-  smartypants: false,
-  xhtml: false,
-});
 let Context = createContext(0);
 interface CategoryItem {
   category_id?: number;
@@ -287,15 +271,4 @@ const MsgList: FC<ChatMsgList> = forwardRef((props, ref) => {
     </>
   );
 });
-
-const MarkedHighlight: FC<MarkedHljs> = function (props: any) {
-  return (
-    <div
-      className="hljs"
-      dangerouslySetInnerHTML={{
-        __html: marked(props.msg).replace(/<pre>/g, "<pre class='hljs'>"),
-      }}
-    ></div>
-  );
-};
 export default Index;

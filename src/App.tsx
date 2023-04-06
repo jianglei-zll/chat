@@ -1,5 +1,5 @@
 import KeepAlive from "react-activation";
-import { BrowserRouter, useRoutes ,HashRouter } from "react-router-dom";
+import { BrowserRouter, useRoutes, HashRouter } from "react-router-dom";
 
 import Index from "./pages/index";
 import Layout from "./pages/layout";
@@ -12,14 +12,18 @@ const routesList = [
     children: [
       {
         element: (
-          <KeepAlive>
+          <KeepAlive cacheKey="index">
             <Index />
           </KeepAlive>
         ),
         index: true, // index设置为true 变成默认的二级路由
       },
       {
-        element: <Translate />,
+        element: (
+          <KeepAlive cacheKey="Translate">
+            <Translate />
+          </KeepAlive>
+        ),
         path: "translate",
       },
       {
