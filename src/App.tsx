@@ -1,5 +1,5 @@
 import KeepAlive from "react-activation";
-import { BrowserRouter, useRoutes } from "react-router-dom";
+import { BrowserRouter, useRoutes ,HashRouter } from "react-router-dom";
 
 import Index from "./pages/index";
 import Layout from "./pages/layout";
@@ -36,9 +36,12 @@ function WrapperRoutes() {
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <WrapperRoutes />
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <HashRouter>
+        <WrapperRoutes />
+      </HashRouter>
     </div>
   );
 }
