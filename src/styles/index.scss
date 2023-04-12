@@ -3,6 +3,11 @@ body,
 #root {
   height: 100%;
   background: #f1f1f1;
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar { // chrome safari
+    display: none;
+  }
 }
 .chat_index {
   position: relative;
@@ -11,6 +16,11 @@ body,
   flex-direction: column;
   max-height: calc(100vh - 50px);
   overflow: scroll;
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar { // chrome safari
+    display: none;
+  }
   .user,
   .assistant {
     width: 100%;
@@ -136,7 +146,12 @@ body,
 
 .translate {
   height: calc(100% - 50px);
-  overflow-y: scroll;
+  overflow: scroll;
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar { // chrome safari
+    display: none;
+  }
   display: flex;
   align-items: center;
   flex-direction: column;
