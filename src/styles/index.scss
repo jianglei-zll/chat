@@ -217,11 +217,11 @@ body,
 }
 
 .pinyin {
-  height: calc(100vh - 50px);
+  height: calc(100% - 50px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  padding: 50px 0;
   .zhongguo {
     display: flex;
   }
@@ -236,10 +236,11 @@ body,
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding:0 20px;
   }
   .china {
     width: 78px;
-    height: 129px;
+    height: 109px;
     padding-bottom: 20px;
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "SF Pro Text",
       "Helvetica Neue", Helvetica, "PingFang SC", "Segoe UI", Roboto,

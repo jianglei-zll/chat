@@ -11,7 +11,7 @@ const Pinyin: FC = function () {
   const zhong = useRef<any>();
   const guo = useRef<any>();
   const [state, updateState] = hooks.useSetState<State>({
-    text: "",
+    text: "大撒旦卡莎就是肯定会咯技术的喀什的大卡司电话卡速度很快就爱的哈桑卡的话卡死",
     brcolor: "#ddd",
     chinese: [],
   });
