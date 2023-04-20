@@ -5,7 +5,8 @@ body,
   background: #f1f1f1;
   scrollbar-width: none; /* firefox */
   -ms-overflow-style: none; /* IE 10+ */
-  &::-webkit-scrollbar { // chrome safari
+  &::-webkit-scrollbar {
+    // chrome safari
     display: none;
   }
 }
@@ -18,7 +19,8 @@ body,
   overflow: scroll;
   scrollbar-width: none; /* firefox */
   -ms-overflow-style: none; /* IE 10+ */
-  &::-webkit-scrollbar { // chrome safari
+  &::-webkit-scrollbar {
+    // chrome safari
     display: none;
   }
   .user,
@@ -149,7 +151,8 @@ body,
   overflow: scroll;
   scrollbar-width: none; /* firefox */
   -ms-overflow-style: none; /* IE 10+ */
-  &::-webkit-scrollbar { // chrome safari
+  &::-webkit-scrollbar {
+    // chrome safari
     display: none;
   }
   display: flex;
@@ -210,5 +213,55 @@ body,
     padding: 5px;
     font-size: 14px;
     color: var(--rv-typography-color);
+  }
+}
+
+.pinyin {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  .zhongguo {
+    display: flex;
+  }
+  .ch-input {
+    width: 80%;
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    padding: 15px 20px;
+    border-radius: 50px;
+  }
+  .ch-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .china {
+    width: 78px;
+    height: 129px;
+    padding-bottom: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "SF Pro Text",
+      "Helvetica Neue", Helvetica, "PingFang SC", "Segoe UI", Roboto,
+      "Hiragino Sans GB", "arial", "microsoft yahei ui", "Microsoft YaHei",
+      SimSun, sans-serif;
+    font-size: 26px;
+    .pinyins {
+      width: 80px;
+      height: 51px;
+      background: url("../assets/xian.svg") 0 0 no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hanzi {
+      width: 80px;
+      height: 80px;
+      background: url("../assets/tian.svg") 0 0 no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+    }
   }
 }

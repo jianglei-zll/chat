@@ -14,6 +14,11 @@ const tabs: any = [
     title: "translate",
     icon: <FriendsO />,
   },
+  {
+    url:"/pinyin",
+    title:"pinyin",
+    icon:<FriendsO />
+  }
 ];
 const Layout: FC = function () {
   const navigator = useNavigate();

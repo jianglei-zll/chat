@@ -5,6 +5,7 @@ import Index from "./pages/index";
 import Layout from "./pages/layout";
 import Translate from "./pages/translate";
 import MsgList from "./pages/msgList";
+import Pinyin from "./pages/pinyin";
 const routesList = [
   {
     path: "/",
@@ -29,6 +30,14 @@ const routesList = [
       {
         element: <MsgList />,
         path: "msgList",
+      },
+      {
+        element: (
+          // <KeepAlive cacheKey="pinyin">
+          <Pinyin />
+          // </KeepAlive>
+        ),
+        path: "pinyin",
       },
     ],
   },

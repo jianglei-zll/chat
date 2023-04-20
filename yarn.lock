@@ -957,6 +957,11 @@ gud@^1.0.0:
   resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
   integrity sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
 
+hanzi-writer@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/hanzi-writer/-/hanzi-writer-3.5.0.tgz#4083203d8bbcfd6d7ed35305b349b7b060665aef"
+  integrity sha512-ItQ0xJ4AQ1jxH/vDlaNpIjuFxQac+LDg5UdhiNJkl0UC8cuZLyamI3Y6Yxm3j0hFmsBnBpUUu7RhIzcPG6AABA==
+
 has-bigints@^1.0.1, has-bigints@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/has-bigints/-/has-bigints-1.0.2.tgz#0871bd3e3d51626f6ca0966668ba35d5602d6eaa"
@@ -1585,6 +1590,11 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
+
+pinyin-pro@^3.13.2:
+  version "3.13.2"
+  resolved "https://registry.yarnpkg.com/pinyin-pro/-/pinyin-pro-3.13.2.tgz#b5a4716c33579398334291740b61a218b796b314"
+  integrity sha512-DKz04M0PkrongGyJW7GU+iNB2jInwLcP1p5+w0gu0hz2PtF8q+GTC1GDW731wyhm+q7PGoyMuY3sLONLTqi6mg==
 
 postcss@^8.4.21:
   version "8.4.21"
